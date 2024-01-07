@@ -1,0 +1,284 @@
+body {
+    background: #00BBFF;
+}
+
+.top_button_list{
+    width: 100%;
+    min-height:40px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.round_button{
+    width: 36px;
+    height: 36px;
+    margin : 6px;
+    background: #D2EBEE;
+    border-radius: 18px;
+    border:4px solid #a8dadf
+}
+
+.title{
+    width: 100%;
+    padding: 8px;
+    min-height: 120px;
+    text-align: center;
+}
+
+
+.content {
+    background-color: #D2EBEE;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+}
+.chara_profile_list{
+    width: 600px;
+    margin: 16px;
+    padding: 16px;
+}
+
+.chara_profile_avatar_list{
+    max-width: 100%;
+    margin: 6px 0px;
+    padding : 24px 6px;
+    background-color: #A8DADF;
+    border: 4px solid purple;
+    border-radius: 24px 24px 0 0;
+    border-bottom-style: none;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
+.chara_profile_avatar_select{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    padding : 10px;
+    border-radius: 10px;
+    border: 4px solid #CC66FF;
+	background-size: cover;
+	background-position: center;
+}
+
+.divider {
+  border-top: 4px solid purple;
+  margin: 4px 0px;
+  width: 100%;
+}
+
+.chara_profile_content_list{
+    max-width: 100%;
+    background-color: #A8DADF;
+    border: 4px solid purple;
+    border-radius: 0px 0px 24px 24px;
+    border-top-style: none;
+}
+.chara_profile_content_title{
+    font-size:30px;
+    padding: 0px 30px;
+    text-align:right;
+}
+.chara_profile_content_sub_list{
+    max-width: 100%;
+    padding: 10px 0px;
+    display: flex;
+}
+.chara_profile_content_sub_detail_list{
+    width:45%;
+}
+.chara_profile_content_figure_list{
+    width:55%;
+    direction: rtl;
+}
+
+.chara_profile_content_detail{
+    max-width: 100%;
+    padding: 10px;
+}
+.chara_profile_content_detail_title{
+    font-size:15px;
+}
+.chara_profile_content_detail_divide{
+    border-top: 2px solid purple;
+    margin: 4px 0px;
+    width: 100%;
+}
+.chara_profile_content_detail_content{
+    line-height: 1.5;
+    font-size:20px;
+}
+.side_stories_select{
+      width: 90%;
+      min-height:20px;
+      padding: 3px;
+      background: #e7eaf6;
+      margin: 10px;
+      border: 2px solid purple;
+      border-radius: 12px;
+      font-size:20px;
+      text-align:center;
+}
+
+.chara_project_list{
+    margin: 16px;
+    padding: 16px;
+    background-color: #A8DADF;
+    text-align: center;
+    column-count: 2;
+    column-gap: 15px;
+}
+.chara_pic_frame{
+    width:100%;
+    margin: 15px 0px;
+    -webkit-column-break-inside: avoid;
+}
+.chara_pic_frame_title{
+    width: 95%;
+    min-height: 30px;
+    background: #e7eaf6;
+    border: 2px solid #113f67;
+    border-bottom-style: none;
+    border-radius:24px 24px 0px 0px;
+    padding: 3px;
+    margin: 10px 10px 0px 10px;
+    font-size: 30px;
+    text-align:left
+}
+.chara_pic_frame_content{
+    width: 95%;
+    border: 2px solid #113f67;
+    border-top-style: none;
+    border-radius:0px 0px 24px 24px;
+    min-height:100px;
+    padding: 12px 3px;
+    margin: 0px 10px 10px 10px;
+}
+.chara_3view_frame{
+    width:95%;
+    max-width:600px;
+    margin:12px auto;
+    border-radius: 16px 0px 16px 16px;
+    background:#fff;
+}
+.chara_3view_title{
+    font-size:25px;
+    min-height:25px;
+    margin:5px 0px;
+    padding:2px 10px;
+    text-align:right;
+    border-right: 4px solid black;
+}
+.chara_3view_pic{
+    min-height:220px;
+    background:#eee;   
+}
+#pic_test_frame{
+    width:500px;
+    height:220px;
+    background:#ddd;
+}
+.chara_3view_foot{
+    font-size:15px;
+    color: #999;
+    min-height:15px;
+    margin-top:5px;
+    padding:2px 10px;
+    text-align:left;   
+}
+
+.chara_other_pic_list{
+    column-count: 3;
+    column-gap: 15px;
+    margin-top: 10px;
+}
+.chara_other_pic_item {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.chara_other_pic_item>img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.song_frame_area{
+    margin:18px 6px;
+    display:flex;
+}
+.song_pic_area{
+    width:100px;
+    height:100px;
+    border-radius: 70px; 
+    border: 6px solid purple;    
+    margin: 0px 5px;
+}
+.song_detail_area{
+    padding:0px 6px;
+    margin:0px 12px;
+    width:65%;
+    border-bottom: 4px dashed purple; 
+}
+.song_title_area_frame{
+    display:grid;
+    grid-template-columns: repeat(2 , 1fr);
+    
+}
+.song_name_title{
+    max-width:60%;
+    font-size:25px;
+    text-align:left;
+}
+.song_author{
+    font-size:15px;
+    text-align:left;
+    padding: 0px 8px;
+    margin: 6px 12px;
+    border-left:2px solid purple;
+}
+.song_audio_area{
+    margin:12px 0px;
+}
+.project_title{
+    font-size:25px;
+}
+
+.other_detail_area{
+      margin:12px 6px;
+      display: flex;
+}
+.other_project_pic_area{
+      width: 30%;
+      max-width:140px;
+      max-height:140px;
+      margin: 0px 5px;
+      border-radius: 10px;
+      border: 4px solid purple;
+}
+
+.other_project_content_area{
+      width: 70%;
+      min-height:140px;
+      background: #aabbCC;
+      padding: 3px;
+}
+.other_project_content_button_list{
+      display: flex;
+      min-height:50px;
+      margin:12px 6px;
+      justify-content: center;
+      border-bottom: 4px dashed purple; 
+}
+
+#special_story{
+      background: #66CCFF;
+}
+
+@media screen and (max-width: 1680px) {
+    .chara_project_list {
+        column-count: 1;
+    }
+  }
+@media screen and (max-width: 1080px) {
+  .content {
+      display: grid;
+  }
+}

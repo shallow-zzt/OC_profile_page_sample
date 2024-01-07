@@ -1,0 +1,55 @@
+{
+  "avatar": "",
+  "name": "",
+  "birthday": "",
+  "favorites": "",
+  "dislikes": "",
+  "nature":"",
+  "socials":[
+	{
+		"platform":"",
+		"username":"",
+		"links":""
+	}
+  ],
+  "figure-pic":"",
+  "stories":[
+	{
+		"title":"",
+		"links":"",
+		"color":""
+	}
+  ],
+  
+  "3side-view":[
+	{
+		"cloth-name":"",
+		"pic":"",
+		"addition":""
+	}
+  ],
+  "other-pictures":[
+		""
+  ],
+  "project-song":[
+	{
+		"pic":"",
+		"title":"",
+		"author":"",
+		"song":""
+	}
+  ],
+  "projcet-production":[
+	{
+		"name":"",
+		"pic":"",
+		"content":"",
+		"button":[
+			{
+				"name":"",
+				"link":""
+			}
+		]
+	}
+  ]
+}
