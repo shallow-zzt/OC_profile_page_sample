@@ -1,13 +1,16 @@
 # OC_profile_page_sample
 
 一个用来挂自设或者OC的小站点，使用纯前端实现。
+
 这个项目主要是受到了有些大佬们给自己oc搭建了网站才有的启发
 
 ### 配置方法
 从json文件夹内选择合适的语言进行配置，格式可参考json/zh-cn内的json文件
 
 json文件包括通用文件（generic.json）和角色配置文件（角色名.json）
+
 由于目前尚未完工，目前只能编辑shallow.json
+
 配置格式可以参考其中的json文件
 
 ### 可实现的功能
