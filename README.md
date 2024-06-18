@@ -5,7 +5,7 @@
 这个项目主要是受到了有些大佬们给自己oc搭建了网站才有的启发
 
 ### 配置方法
-从json文件夹内选择合适的语言进行配置，格式可参考json/zh-cn内的json文件
+从json文件夹内针对每个语言进行oc资料配置，格式可参考json-sample.json文件
 
 json文件包括通用文件（generic.json）和角色配置文件（角色名.json）
 
