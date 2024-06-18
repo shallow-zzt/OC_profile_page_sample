@@ -1,0 +1,41 @@
+{
+  "avatar": "",
+  "name": "浅水",
+  "birthday": "2月13日",
+  "favorites": "科技 可爱的东西",
+  "dislikes": "被一群人欺负",
+  "nature":"温柔 透明",
+  "figure-pic":"",
+  "socials":[
+  	{
+		"platform":"github",
+		"username":"Github",
+		"links":"http://github.com/shallow-zzt"
+	},
+	{
+		"platform":"twitter",
+		"username":"Twitter",
+		"links":"https://twitter.com/shallow_amquora"
+	},
+	{
+		"platform":"youtube-play",
+		"username":"Youtube",
+		"links":"https://www.youtube.com/@Shallow_Amquora"
+	},
+		{
+		"platform":"television",
+		"username":"Bilibili",
+		"links":"https://space.bilibili.com/470766734"
+	}
+  ],
+  "stories":[
+  ],
+  "3side-view":[
+  ],
+  "other-pictures":[
+  ],
+  "project-song":[
+  ],
+  "projcet-production":[
+  ]
+}

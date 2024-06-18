@@ -1,5 +1,21 @@
+
+
 body {
-    background: #00BBFF;
+    background: repeating-linear-gradient(
+        -60deg,
+        rgba(204, 223, 241, 0.3) 0px,
+        rgba(204, 223, 241, 0.3) 12.5px,
+        rgba(255, 255, 255, 0.3) 12.5px,
+        rgba(255, 255, 255, 0.3) 67.5px
+    ),repeating-linear-gradient(
+        30deg,
+        rgba(204, 223, 241, 0.3) 0px,
+        rgba(204, 223, 241, 0.3) 12.5px,
+        rgba(255, 255, 255, 0.3) 12.5px,
+        rgba(255, 255, 255, 0.3) 67.5px
+    );
+    color: #3a3e42;
+    font: 0 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
 .top_button_list{
@@ -11,16 +27,21 @@ body {
 .round_button{
     width: 36px;
     height: 36px;
+    padding: calc(50%-20px);
     margin : 6px;
     background: #D2EBEE;
     border-radius: 18px;
-    border:4px solid #a8dadf
+    border:2px solid #a8dadf;
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .title{
     width: 100%;
-    padding: 8px;
-    min-height: 120px;
+    padding:  24px 8px;
+  font-size: 40px;
     text-align: center;
 }
 
@@ -29,48 +50,48 @@ body {
     background-color: #D2EBEE;
     display: flex;
     padding: 8px;
+    border-radius: 24px;
     justify-content: center;
 }
+
 .chara_profile_list{
-    width: 600px;
+    width: 33%;
+  max-width:500px;
     margin: 16px;
     padding: 16px;
 }
 
 .chara_profile_avatar_list{
     max-width: 100%;
-    margin: 6px 0px;
-    padding : 24px 6px;
-    background-color: #A8DADF;
-    border: 4px solid purple;
-    border-radius: 24px 24px 0 0;
+    margin: 6px 0px 0px 0px;
+    padding : 6px 6px 0px 0px;
+
     border-bottom-style: none;
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    display: flex;
+    flex-direction: row-reverse;
 }
 .chara_profile_avatar_select{
     width: 80px;
-    height: 80px;
-    margin: auto;
-    padding : 10px;
-    border-radius: 10px;
+    height: 50px;
+    margin : 5px;
     border: 4px solid #CC66FF;
+    border-radius: 6px;
 	background-size: cover;
 	background-position: center;
+    cursor: pointer;
 }
 
 .divider {
-  border-top: 4px solid purple;
-  margin: 4px 0px;
-  width: 100%;
+  border-top: 2px solid cornflowerblue;
+  margin: 3px 30%;
+  width: 68%;
 }
 
 .chara_profile_content_list{
     max-width: 100%;
     background-color: #A8DADF;
-    border: 4px solid purple;
-    border-radius: 0px 0px 24px 24px;
-    border-top-style: none;
+    border: 4px solid cornflowerblue;
+    border-radius: 24px;
 }
 .chara_profile_content_title{
     font-size:30px;
@@ -98,13 +119,13 @@ body {
     font-size:15px;
 }
 .chara_profile_content_detail_divide{
-    border-top: 2px solid purple;
+    border-top: 2px solid cornflowerblue;
     margin: 4px 0px;
     width: 100%;
 }
 .chara_profile_content_detail_content{
     line-height: 1.5;
-    font-size:20px;
+    font-size:25px;
 }
 .side_stories_select{
       width: 90%;
@@ -112,45 +133,47 @@ body {
       padding: 3px;
       background: #e7eaf6;
       margin: 10px;
-      border: 2px solid purple;
+      border: 2px solid cornflowerblue;
       border-radius: 12px;
       font-size:20px;
       text-align:center;
 }
 
 .chara_project_list{
+  width:67%;
     margin: 16px;
     padding: 16px;
-    background-color: #A8DADF;
+      max-width:1050px;
+
     text-align: center;
     column-count: 2;
     column-gap: 15px;
 }
 .chara_pic_frame{
     width:100%;
-    margin: 15px 0px;
     -webkit-column-break-inside: avoid;
 }
 .chara_pic_frame_title{
     width: 95%;
     min-height: 30px;
     background: #e7eaf6;
-    border: 2px solid #113f67;
+    border: 4px solid cornflowerblue;
     border-bottom-style: none;
     border-radius:24px 24px 0px 0px;
     padding: 3px;
-    margin: 10px 10px 0px 10px;
+    margin: 10px 10px 0px auto;
     font-size: 30px;
     text-align:left
 }
 .chara_pic_frame_content{
     width: 95%;
-    border: 2px solid #113f67;
+    border: 4px solid cornflowerblue;
     border-top-style: none;
+  background-color:#A8DADF;
     border-radius:0px 0px 24px 24px;
     min-height:100px;
     padding: 12px 3px;
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px 10px auto;
 }
 .chara_3view_frame{
     width:95%;
@@ -208,14 +231,14 @@ body {
     width:100px;
     height:100px;
     border-radius: 70px; 
-    border: 6px solid purple;    
+    border: 6px solid cornflowerblue;    
     margin: 0px 5px;
 }
 .song_detail_area{
     padding:0px 6px;
     margin:0px 12px;
     width:65%;
-    border-bottom: 4px dashed purple; 
+    border-bottom: 4px dashed cornflowerblue; 
 }
 .song_title_area_frame{
     display:grid;
@@ -232,7 +255,7 @@ body {
     text-align:left;
     padding: 0px 8px;
     margin: 6px 12px;
-    border-left:2px solid purple;
+    border-left:2px solid cornflowerblue;
 }
 .song_audio_area{
     margin:12px 0px;
@@ -251,7 +274,7 @@ body {
       max-height:140px;
       margin: 0px 5px;
       border-radius: 10px;
-      border: 4px solid purple;
+      border: 4px solid cornflowerblue;
 }
 
 .other_project_content_area{
@@ -265,19 +288,41 @@ body {
       min-height:50px;
       margin:12px 6px;
       justify-content: center;
-      border-bottom: 4px dashed purple; 
+      border-bottom: 4px dashed cornflowerblue; 
 }
 
 #special_story{
       background: #66CCFF;
 }
 
-@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1620px) {
+    .chara_profile_list{
+    width: 45%;
+    margin: 8px;
+    padding: 8px;
+}
+  .chara_project_list{
+    width: 45%;
+    max-width:500px;
+    margin: 8px;
+    padding: 8px;
+  }
     .chara_project_list {
         column-count: 1;
+        column-gap: 0px;
     }
   }
 @media screen and (max-width: 1080px) {
+  .chara_profile_list{
+    width: 95%;
+    margin: 8px;
+    padding: 8px;
+}
+  .chara_project_list{
+    width: 95%;
+    margin: 8px;
+    padding: 8px;
+  }
   .content {
       display: grid;
   }

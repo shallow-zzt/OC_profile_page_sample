@@ -1,9 +1,58 @@
-const urlParams = new URLSearchParams(window.location.search);
-const lang = urlParams.get('lang') || 'zh-cn';
-const chara = urlParams.get('chara') || 'shallow';
+var urlParams = new URLSearchParams(window.location.search);
+var lang = urlParams.get('lang') || 'zh-cn';
+var chara = urlParams.get('chara') || 'shallow';
+
+document.getElementById('shallow').addEventListener('click', () => {
+	chara = 'shallow';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('shellxy').addEventListener('click', () => {
+	chara = 'shellxy';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('bt').addEventListener('click', () => {
+	chara = 'bt';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('zh-cn').addEventListener('click', () => {
+	lang = 'zh-cn';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('en-us').addEventListener('click', () => {
+	lang = 'en-us';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('ja-jp').addEventListener('click', () => {
+	lang = 'ja-jp';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
+
+document.getElementById('ko-kr').addEventListener('click', () => {
+	lang = 'ko-kr';
+	setGeneric(lang);
+	setProfile(lang,chara);
+	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
+});
 
 function setGeneric(language){
-	var filePath=`json/${language}/generic.json`
+	var filePath=`json/${language}/generic.json`;
 	fetch(filePath)
     .then(response => response.json()) 
     .then(data => {
@@ -16,7 +65,7 @@ function setGeneric(language){
 }
 
 function setProfile(language , character){
-	var filePath=`json/${language}/${character}.json`
+	var filePath=`json/${language}/${character}.json`;
 	fetch(filePath)
     .then(response => response.json()) 
     .then(data => {

@@ -1,0 +1,25 @@
+{
+  "language-list":[
+    {
+      "language-code":"zh-cn",
+	  "language-logo":"中"
+    },
+	{
+      "language-code":"en-us",
+	  "language-logo":"En"
+    },
+	{
+      "language-code":"ja-jp",
+	  "language-logo":"あ"
+    },
+	{
+      "language-code":"ko-kr",
+	  "language-logo":"한"
+    }
+  ],
+  "characters":[
+    "shallow",
+	"shellxy",
+	"bt"
+  ]
+}
