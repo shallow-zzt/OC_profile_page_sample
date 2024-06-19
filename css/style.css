@@ -56,7 +56,7 @@ body {
 
 .chara_profile_list{
     width: 33%;
-  max-width:500px;
+  min-width:500px;
     margin: 16px;
     padding: 16px;
 }
@@ -74,11 +74,14 @@ body {
     width: 80px;
     height: 50px;
     margin : 5px;
-    border: 4px solid #CC66FF;
     border-radius: 6px;
 	background-size: cover;
 	background-position: center;
     cursor: pointer;
+}
+
+.chara_profile_avatar_select img{
+    object-fit: contain;
 }
 
 .divider {
@@ -125,7 +128,12 @@ body {
 }
 .chara_profile_content_detail_content{
     line-height: 1.5;
-    font-size:25px;
+    font-size:22px;
+
+}
+
+#details{
+    font-size:16px;
 }
 .side_stories_select{
       width: 90%;
@@ -143,7 +151,7 @@ body {
   width:67%;
     margin: 16px;
     padding: 16px;
-      max-width:1050px;
+      min-width:1050px;
 
     text-align: center;
     column-count: 2;
@@ -303,7 +311,7 @@ body {
 }
   .chara_project_list{
     width: 45%;
-    max-width:500px;
+    min-width:500px;
     margin: 8px;
     padding: 8px;
   }

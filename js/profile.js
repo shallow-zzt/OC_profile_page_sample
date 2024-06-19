@@ -51,10 +51,41 @@ document.getElementById('ko-kr').addEventListener('click', () => {
 	history.pushState({}, '', `index.html?lang=${lang}&chara=${chara}`);
 });
 
+
+// function setLanguageList(){
+// 	var filepath=`json/manifest.json`;
+// 	fetch(filepath)
+// 	.then(response => response.json())
+// 	.then(data => {
+// 		languageList = data["language-list"]
+// 		for (let i = languageList.length - 1; i >= 0; i--) {
+// 			let languageCode = languageList[i]["language-code"];
+// 			let languageLogo = languageList[i]["language-logo"];
+// 			let content = `<div class="round_button" id="${languageCode}">${languageLogo}</div>`;
+// 			document.getElementById("lang_list").innerHTML += content;
+		
+// 			document.getElementById(languageList[i]["language-code"]).addEventListener('click', () => {
+// 				console.log(languageList[i]["language-code"]);
+// 				setGeneric(languageList[i]["language-code"]);
+// 				setProfile(languageList[i]["language-code"], chara);
+// 				history.pushState({}, '', `index.html?lang=${languageList[i]["language-code"]}&chara=${chara}`);
+// 			});
+// 		}
+// 	});
+
+// }
+
+
 function setGeneric(language){
 	var filePath=`json/${language}/generic.json`;
 	fetch(filePath)
-    .then(response => response.json()) 
+    .then(response => {
+		if (response.status === 404) {
+		  window.location.href = '/404.html'; 
+		} else {
+			return response.json();
+		}
+	  }) 
     .then(data => {
 		var translateKeys=Object.keys(data);
 		for(var i=0;i<translateKeys.length;i++){
@@ -65,16 +96,23 @@ function setGeneric(language){
 }
 
 function setProfile(language , character){
+	var applyProfile = 0;
 	var filePath=`json/${language}/${character}.json`;
 	fetch(filePath)
-    .then(response => response.json()) 
+    .then(response => {
+		if (response.status === 404) {
+		  window.location.href = '/404.html'; 
+		} else {
+			return response.json();
+		}
+	  }) 
     .then(data => {
 		var avatar = data["avatar"];
 		var name = data["name"];
 		var birthday = data["birthday"];
 		var favorites = data["favorites"];
 		var dislikes = data["dislikes"];
-		var nature = data["nature"];	
+		var details = data["details"];	
 		var socials = data["socials"];		
 		var stories = data["stories"];
 		var figure = data["figure-pic"];
@@ -84,14 +122,20 @@ function setProfile(language , character){
 		var projectSong = data["project-song"];
 		var projcetProduction = data["projcet-production"];
 		
+		document.getElementById('name_content').style.display = 'block';
+		document.getElementById('birthday_content').style.display = 'block';
+		document.getElementById('favorites_content').style.display = 'block';
+		document.getElementById('dislikes_content').style.display = 'block';
+		document.getElementById('details_content').style.display = 'block';
 		
-		name != "" ? document.getElementById('name').innerText = name : document.getElementById('name_content').style.display = 'none';
-		birthday != "" ? document.getElementById('birthday').innerText = birthday : document.getElementById('birthday_content').style.display = 'none';
-		favorites != "" ? document.getElementById('favorites').innerText = favorites : document.getElementById('favorites_content').style.display = 'none';
-		dislikes != "" ? document.getElementById('dislikes').innerText = dislikes : document.getElementById('dislikes_content').style.display = 'none';
-		nature != "" ? document.getElementById('nature').innerText = nature : document.getElementById('nature_content').style.display = 'none';
+		name != "" ? document.getElementById('name').innerHTML = name : document.getElementById('name_content').style.display = 'none';
+		birthday != "" ? document.getElementById('birthday').innerHTML = birthday : document.getElementById('birthday_content').style.display = 'none';
+		favorites != "" ? document.getElementById('favorites').innerHTML = favorites : document.getElementById('favorites_content').style.display = 'none';
+		dislikes != "" ? document.getElementById('dislikes').innerHTML = dislikes : document.getElementById('dislikes_content').style.display = 'none';
+		details != "" ? document.getElementById('details').innerHTML = details : document.getElementById('details_content').style.display = 'none';
 		figure != "" ? document.getElementById('figure').innerHTML  = `<img src="${figure}" style="width: 90%; height: 100%; object-fit: cover;"><img>` : document.getElementById('figure').innerHTML  = '';
 
+		document.getElementById('socials_content').style.display = 'block';
 		if(socials.length == 0){document.getElementById('socials_content').style.display = 'none';}
 		else{
 			document.getElementById('socials').innerText = '';
@@ -104,6 +148,7 @@ function setProfile(language , character){
 			}
 		}
 		
+		document.getElementById('stories_content').style.display = 'block';
 		if(stories.length == 0){document.getElementById('stories_content').style.display = 'none';}
 		else{
 			document.getElementById('story_titles').innerText = '';
@@ -122,14 +167,16 @@ function setProfile(language , character){
 				});
 			}
 		}
-
+		document.getElementById('side_project_content').style.display = 'block';
 		if(threeside.length == 0 && otherpic.length == 0 && projectSong.length == 0 && projcetProduction.length == 0){
 			document.getElementById('side_project_content').style.display = 'none';
 			return;
 		}
 		
+		document.getElementById('chara_3_view_content').style.display = 'block';
 		if(threeside.length == 0){document.getElementById('chara_3_view_content').style.display = 'none';}
 		else{
+			applyProfile +=1;
 			document.getElementById('chara_3_view_list').innerText= '' ;
 			for(var i=0;i<threeside.length;i++){
 				var clothName = threeside[i]['cloth-name'];
@@ -146,8 +193,10 @@ function setProfile(language , character){
 			}
 		}
 		
+		document.getElementById('other_pic_content').style.display = 'block';
 		if(otherpic.length == 0){document.getElementById('other_pic_content').style.display = 'none';}
 		else{
+			applyProfile +=1;
 			document.getElementById('chara_other_pic_list').innerText= '' ;	
 			for(var i=0;i<otherpic.length;i++){
 				var pic = otherpic[i];
@@ -156,8 +205,10 @@ function setProfile(language , character){
 			}
 		}
 		
+		document.getElementById('project_song_content').style.display = 'block';
 		if(projectSong.length == 0){document.getElementById('project_song_content').style.display = 'none';}	
 		else{
+			applyProfile +=1;
 			document.getElementById('project_song_list').innerText= '' ;
 			for(var i=0;i<projectSong.length;i++){
 				var pic = projectSong[i]['pic'];
@@ -186,8 +237,10 @@ function setProfile(language , character){
 			}
 		}
 		
+		document.getElementById('project_production_content').style.display = 'block';
 		if(projcetProduction.length == 0){document.getElementById('project_production_content').style.display = 'none';}		
 		else{
+			applyProfile +=1;
 			document.getElementById('project_list').innerText= '' ;
 			for(var i=0;i<projcetProduction.length;i++){
 				var name = projcetProduction[i]['name'];
@@ -218,9 +271,12 @@ function setProfile(language , character){
 				document.getElementById('project_list').innerHTML += content;
 			}
 		}
-		
+		if(applyProfile == 1){
+			document.getElementById('side_project_content').style.columnCount = 1;
+		}
     });
 }
+
 
 setGeneric(lang);
 setProfile(lang,chara);
