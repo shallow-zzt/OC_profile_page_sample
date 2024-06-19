@@ -18,8 +18,17 @@
     }
   ],
   "characters":[
-    "shallow",
-	"shellxy",
-	"bt"
+    {
+      "name":"shallow",
+      "avatar":"resources/shallow/avatar.jpg"
+    },
+    {
+      "name":"shellxy",
+      "avatar":"resources/shellxy/avatar.jpg"
+    },
+    {
+      "name":"bt",
+      "avatar":"resources/bt/avatar.jpg"
+    }
   ]
 }

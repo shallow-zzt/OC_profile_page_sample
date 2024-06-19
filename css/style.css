@@ -74,13 +74,17 @@ body {
     width: 80px;
     height: 50px;
     margin : 5px;
+    border: 2px solid #D2EBEE;
     border-radius: 6px;
 	background-size: cover;
 	background-position: center;
+
     cursor: pointer;
 }
 
-.chara_profile_avatar_select img{
+.chara_profile_avatar_select>img{
+    max-width: 90px;
+    max-height: 60px;
     object-fit: contain;
 }
 
@@ -200,8 +204,16 @@ body {
 }
 .chara_3view_pic{
     min-height:220px;
+    display: flex;
+    justify-content: center;
     background:#eee;   
 }
+
+.chara_3view_pic>img{
+    object-fit: contain;
+    max-width: 450px;
+}
+
 #pic_test_frame{
     width:500px;
     height:220px;
@@ -251,10 +263,14 @@ body {
 .song_title_area_frame{
     display:grid;
     grid-template-columns: repeat(2 , 1fr);
-    
 }
+
+.song_title_area_frame_no_author{
+    display:grid;
+}
+
 .song_name_title{
-    max-width:60%;
+    max-width:75%;
     font-size:25px;
     text-align:left;
 }
