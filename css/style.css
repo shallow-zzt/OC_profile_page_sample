@@ -49,7 +49,6 @@ body {
 .content {
     background-color: #D2EBEE;
     display: flex;
-    padding: 8px;
     border-radius: 24px;
     justify-content: center;
 }
@@ -211,7 +210,7 @@ body {
 
 .chara_3view_pic>img{
     object-fit: contain;
-    max-width: 450px;
+    max-width: 100%;
 }
 
 #pic_test_frame{
@@ -341,13 +340,38 @@ body {
     width: 95%;
     margin: 8px;
     padding: 8px;
+    min-width:320px;
 }
   .chara_project_list{
     width: 95%;
     margin: 8px;
     padding: 8px;
+    min-width:320px;
   }
   .content {
       display: grid;
   }
 }
+@media screen and (max-width: 440px) {
+
+    .title{
+        width: 100%;
+        padding:  24px 0px;
+      font-size: 40px;
+        text-align: center;
+    }
+    .chara_3view_pic{
+        min-height:110px;
+        display: flex;
+        justify-content: center;
+        background:#eee;   
+    }
+    .chara_profile_content_sub_detail_list{
+        width:90%;
+    }
+    .chara_profile_content_figure_list{
+        display: none;
+    }
+    
+    
+  }
